@@ -1,7 +1,6 @@
 # 基于spring-boot 的学习
 
 ## 涉及技术
------
 * maven+springboot+springmvc+mybatis+druid
 
 ### 第一节 初始化项目
