@@ -1,3 +1,8 @@
+CREATE USER 'spring'@'localhost' IDENTIFIED BY 'spring123';
+GRANT SELECT,INSERT,DELETE,UPDATE,CREATE ON study.* TO 'spring'@'localhost';
+
+CREATE DATABASE study;
+
 CREATE TABLE `user_info` (
  `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
  `user_id` VARCHAR(32) NOT NULL COMMENT '用户id',
@@ -18,8 +23,6 @@ DEFAULT CHARSET=utf8
 ENGINE=InnoDB
 ;
 
-CREATE USER 'spring'@'localhost' IDENTIFIED BY 'spring123';
-GRANT SELECT,INSERT,DELETE,UPDATE ON study.* TO 'spring'@'localhost';
 
 INSERT INTO user_info(user_id,user_account,user_pwd,remark) VALUES
 ('test1','xiaoming',MD5(123),'测试'),
